@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-26 16:12+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\SuperB\settings.py:172
+msgid "English"
+msgstr ""
+
+#: .\SuperB\settings.py:173
+msgid "Azerbaijan"
+msgstr "Azərbaycan"
+
+#: .\account\views.py:59
+msgid ""
+"Included information is false! Please enter right username and password!"
+msgstr ""
+
+#: .\core\templates\base.html:52
+msgid "Languages"
+msgstr "Dillər"
+
+#: .\core\templates\base.html:73
+msgid "My Cart"
+msgstr "Kartım"
+
+#: .\core\templates\base.html:142
+#, fuzzy
+#| msgid "Log In"
+msgid "Log Out"
+msgstr "Daxil ol"
+
+#: .\core\templates\base.html:167
+msgid "Home"
+msgstr "Ana Səhifə"
+
+#: .\core\templates\base.html:168
+msgid "Pages"
+msgstr "Səhifələr"
+
+#: .\core\templates\base.html:170
+msgid "Product List"
+msgstr "Siyahı"
+
+#: .\core\templates\base.html:171
+msgid "Shopping Cart"
+msgstr "Alışveriş Kartı"
+
+#: .\core\templates\base.html:172
+msgid "Checkout"
+msgstr "Sifarişlər"
+
+#: .\core\templates\base.html:175
+msgid "Checkout Shipping Info"
+msgstr "Göndərmə Məlumatı"
+
+#: .\core\templates\base.html:176
+msgid "Checkout Billing Info"
+msgstr "Hesablama Məlumatı"
+
+#: .\core\templates\base.html:180
+msgid "Wishlist"
+msgstr "Siyahı"
+
+#: .\core\templates\base.html:181
+msgid "Multiple Addresses"
+msgstr "Ünvanlar"
+
+#: .\core\templates\base.html:184
+msgid "Address Book"
+msgstr "Ünvan"
+
+#: .\core\templates\base.html:185
+msgid "Address Information"
+msgstr "Ünvan Məlumatı"
+
+#: .\core\templates\base.html:189
+msgid "Login"
+msgstr "Giriş"
+
+#: .\core\templates\base.html:190 .\core\templates\base.html:195
+#, fuzzy
+#| msgid "Blog"
+msgid "Blogs"
+msgstr "Bloq"
+
+#: .\core\templates\base.html:191
+msgid "Contact us"
+msgstr "Əlaqə"
+
+#: .\core\templates\base.html:194
+msgid "About Us"
+msgstr "Haqqımızda"
+
+#: .\core\templates\base.html:198
+msgid "Women"
+msgstr "Qadın"
+
+#: .\core\templates\base.html:201
+msgid "Shirts"
+msgstr "Köynək"
+
+#: .\core\templates\base.html:203
+msgid "Dresses"
+msgstr "Paltar"
+
+#: .\core\templates\base.html:207
+msgid "Men"
+msgstr "Kişi"
+
+#: .\core\templates\base.html:210
+msgid "Jackets"
+msgstr "Gödəkçə"
+
+#: .\core\templates\base.html:212
+msgid "Shoes"
+msgstr "Ayaqqabı"
+
+#: .\core\templates\base.html:216
+msgid "Kids"
+msgstr "Uşaq"
+
+#: .\core\templates\base.html:219
+msgid "Pants"
+msgstr "Şalvar"
+
+#: .\core\templates\base.html:221
+msgid "Sweaters"
+msgstr "Sviter"
+
+#: .\core\templates\base.html:225
+msgid "FAQ"
+msgstr "FAQ"
+
+#~ msgid "My account"
+#~ msgstr "Hesabim"

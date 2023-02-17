@@ -1,0 +1,144 @@
+﻿{% extends "base.html" %}
+{% load static %}
+
+
+{% block css %}
+<!-- CSS Style -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/internal.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/flexslider.css' %}">
+<link rel="stylesheet" href="http:////netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+{% endblock %}
+
+
+{% block title %}
+  <title>Login</title>
+{% endblock %}
+
+
+{% block content %}
+<!-- Main Container -->
+  <section class="main-container col1-layout bounceInUp animated">
+    <div class="main container">
+      <div class="account-login">
+        <div class="page-title">
+          <h1>Login or Create an Account</h1>
+        </div>
+        <fieldset class="col2-set">
+          <legend>Login or Create an Account</legend>
+          <div class="col-1 new-users"><strong>New Customers</strong>
+            <div class="content">
+              <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
+              <div class="buttons-set">
+                <a class="button create-account" style="padding: 10px 20px;" href="{% url 'account:register' %}" ><span>Create an Account</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-2 registered-users"><strong>Registered Customers</strong>
+            <div class="content">
+              <p>If you have an account with us, please log in.</p>
+              <!-- <ul class="form-list">
+                <li>
+                  <label for="email">Email Address <span class="required">*</span></label>
+                  <br>
+                  <input type="text" title="" class="input-text" id="email" value="" name="">
+                </li>
+                <li>
+                  <label for="pass">Password <span class="required">*</span></label>
+                  <br>
+                  <input type="password" title="" id="pass" class="input-text" name="">
+                </li>
+              </ul> -->
+              <form action="{% url 'account:login' %}" method="POST">
+                {% csrf_token %}
+                <ul class="row">
+                   {% for field in form %}
+                   <li class="col-md-12">
+                    <label for="">{{field.label |upper}} {{field}}</label>
+                   </li>
+                   {% endfor %}
+
+                </ul>
+              
+              <p class="required">* Required Fields</p>
+              <div class="buttons-set">
+                <button id="send2" name="" type="submit" class="button login"><span>Login</span></button>
+                <!-- <a class="forgot-word" href="#">Forgot Your Password?</a> </div> -->
+                <a href="{% url 'account:password_reset' %}"><i>Forgot Password?</i></a>
+              </div>
+
+                <div class="social">
+                  <h4>Follow Us</h4>
+                  <ul class="link">
+                      <li class="fb pull-left"><a href="{% url 'social:begin' 'facebook' %}?next={{ request.GET.next }}"></a></li>
+                      <li class="googleplus pull-left"><a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.GET.next }}"></a></li>
+                  </ul>
+              </div>
+              
+            </div>
+          </form>
+          </div>
+        </fieldset>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+  </section>
+  <!-- Main Container End --> 
+  
+  <!-- Brand logo starts  -->
+  <div class="brand-logo wow bounceInUp animated">
+    <div class="container">
+      <div class="slider-items-products">
+        <div id="brand-logo-slider" class="product-flexslider hidden-buttons">
+          <div class="slider-items slider-width-col6"> 
+            
+            <!-- Item -->
+            <div class="item"><a href="#"><img src="{% static 'images/b-logo3.png' %}" alt="Image"></a> </div>
+            <!-- End Item --> 
+            
+            <!-- Item -->
+            <div class="item"><a href="#"><img src="{% static 'images/b-logo2.png' %}" alt="Image"></a> </div>
+            <!-- End Item --> 
+            
+            <!-- Item -->
+            <div class="item"><a href="#"><img src="{% static 'images/b-logo1.png' %}" alt="Image"></a> </div>
+            <!-- End Item --> 
+            
+            <!-- Item -->
+            <div class="item"><a href="#"><img src="{% static 'images/b-logo4.png' %}" alt="Image"></a> </div>
+            <!-- End Item --> 
+            
+            <!-- Item -->
+            <div class="item"><a href="#"><img src="{% static 'images/b-logo5.png' %}" alt="Image"></a> </div>
+            <!-- End Item --> 
+            
+            <!-- Item -->
+            <div class="item"><a href="#"><img src="{% static 'images/b-logo6.png' %}" alt="Image"></a> </div>
+            <!-- End Item --> 
+            
+            <!-- Item -->
+            <div class="item"><a href="#"><img src="{% static 'images/b-logo1.png' %}" alt="Image"></a> </div>
+            <!-- End Item --> 
+            
+            <!-- Item -->
+            <div class="item"><a href="#"><img src="{% static 'images/b-logo4.png' %}" alt="Image"></a> </div>
+            <!-- End Item --> 
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Brand logo ends  --> 
+{% endblock %}
+
+
+{% block js %}
+<!-- JavaScript -->  
+<script type="text/javascript" src="{% static 'js/parallax.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/jquery.flexslider.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/cloud-zoom.js' %}"></script>
+{% endblock %}

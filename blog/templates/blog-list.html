@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Blog</title>
+{% endblock %}
+
+<!-- CSS Style -->
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/blogmate.css' %}">
+{% endblock %}
+
+<body class="blogmate-index-index rtl inner-page">
+  <div id="page">
+    <!-- Main Container -->
+    {% block content %}
+    <section class="main-container col2-right-layout bounceInUp animated">
+      <div class="main container">
+        <div class="row">
+          <div class="col-main col-sm-9">
+            <div class="blog-wrapper latest-blog" id="main">
+              <div class="site-content" id="primary">
+                <div role="main" id="content">
+                  {% for post in posts %}
+                  <div class="blog_post">
+                    <div class="thumbnail">
+                      <h2>
+                        <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+                      </h2>
+                      <div class="featured-img">
+                        <img src="{{ post.image.url }}" alt="blog post">
+                      </div>
+                    </div>
+                    <div class="entry-meta">
+                      <a href="{% url 'blogs' %}?author={{post.author.author_slug}}">
+                        <span class="author-avatar byline"><img alt="" src="{{ post.author.author_image.url }}"
+                            class="avatar avatar-96 photo">{{ post.author }}</span> <span class="timestamp">{{
+                          post.date|date:"F j, Y"}}</span>
+                      </a>
+                    </div>
+                    <p>{{ post.desc|truncatechars:550 }}</p>
+                    <a href="{{ post.get_absolute_url }}" class="continue-btn">Continue Reading <span>›</span></a>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+              {% if is_paginated %}
+              <div class="row mt-5">
+                <div class="col text-center">
+                  <div class="block-27">
+                    <ul>
+                      {% if page_obj.has_previous %}
+                      <li><a href="?page={{ page_obj.previous_page_number }}">&lt;</a></li>
+                      {% endif %}
+                      {% for page in paginator.page_range %}
+                      {% if page_obj.number == page %}
+                      <li class="active"><span>{{ page }}</span></li>
+                      {% else %}
+                      <li><a href="?page={{page}}">{{page}}</a></li>
+                      {% endif %}
+                      {% endfor %}
+                      {% if page_obj.has_next %}
+                      <li><a href="?page={{ page_obj.next_page_number }}">&gt;</a></li>
+                      {% endif %}
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              <br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endblock %}
+    <!-- Main Container End -->
+  </div>
+
+  {% block js %}
+  <script type="text/javascript" src="{% static 'js/parallax.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/jquery.flexslider.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/cloud-zoom.js' %}"></script>
+  {% endblock %}
+  
